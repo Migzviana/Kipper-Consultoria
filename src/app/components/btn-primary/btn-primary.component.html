@@ -1,0 +1,12 @@
+<button 
+  (click)="submit()" 
+  [class]="'btn ' + variant"
+  [disabled]="disabled"
+>
+  <ng-container *ngIf="!loading; else loadingTemplate">
+    {{ btnText }}
+  </ng-container>
+  <ng-template #loadingTemplate>
+    carregando...
+  </ng-template>
+</button>
